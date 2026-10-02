@@ -3571,7 +3571,7 @@ function ytShortsPageHTML(id) {
         <button class="yt-shorts-arrow" id="yt-shorts-down" ${idx === shortsIds.length - 1 ? 'disabled' : ''}>▼</button>
       </div>
       <div class="yt-shorts-player">
-        <iframe class="yt-shorts-iframe" src="https://www.youtube.com/embed/${activeId}?rel=0&modestbranding=1" title="${escapeForAttr(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img class="yt-shorts-iframe yt-shorts-static" src="https://i.ytimg.com/vi/${activeId}/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${activeId}/hqdefault.jpg'" alt="${escapeForAttr(v.title)}" draggable="false">
         <div class="yt-shorts-meta">
           <div class="yt-shorts-channel"><span class="yt-card-avatar small"></span>${v.channel}<button class="yt-subscribe-btn small" id="yt-subscribe-btn">Odebírat</button></div>
           <div class="yt-shorts-title">${v.title}</div>
